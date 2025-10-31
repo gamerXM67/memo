@@ -1,0 +1,52 @@
+/* Applique à tous les éléments du document */
+* {
+  box-sizing: border-box; /* Inclut les bordures et le padding dans la taille totale des éléments */
+}
+
+/* Conteneur principal (grille de cubes) */
+.carte {
+  margin: 0 auto; /* Centre horizontalement le conteneur */
+  height: 45em; /* Définit une hauteur fixe du cube */
+}
+
+/* Styles communs à chaque case du cube */
+.carte > div {
+  border: 2px solid rgb(233, 171, 88); /* Bordure dorée autour des cases */
+  border-radius: 5px; /* Coins légèrement arrondis */
+  padding: 1em; /* Espacement interne du contenu */
+  color: #d9480f; /* Couleur du texte orangée */
+}
+
+/* Mise en page en grille (CSS Grid) */
+.carte {
+  display: grid; /* Active le système de grille */
+  grid-template-columns: repeat(2, 1fr); /* 2 colonnes de taille égale */
+  grid-gap: 10px; /* Espacement entre les cases */
+  grid-auto-rows: minmax(100px, auto); /* Hauteur minimale des lignes */
+}
+
+/* --- Cases de la première ligne --- */
+.one {
+  grid-column: 1; /* Colonne 1 */
+  grid-row: 1; /* Ligne 1 */
+  background-color: rgba(246, 148, 3, 0.5); /* Orange transparent */
+}
+
+.two {
+  grid-column: 1; /* Colonne 2 */
+  grid-row: 2; /* Ligne 1 */
+  background-color: rgba(32, 43, 194, 0.5); /* Bleu transparent */
+}
+
+.three {
+  grid-column: 2; /* Colonne 3 */
+  grid-row: 1; /* Ligne 1 */
+  background-color: rgba(229, 9, 9, 0.5); /* Rouge transparent */
+}
+
+/* --- Cases de la deuxième ligne --- */
+.four {
+  grid-column: 2; /* Colonne 1 */
+  grid-row: 2; /* Ligne 2 */
+  background-color: rgba(237, 65, 206, 0.5); /* Rose/violet transparent */
+}
